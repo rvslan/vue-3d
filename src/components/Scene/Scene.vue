@@ -48,6 +48,13 @@ export default {
 
       // Lighting
       lights: [],
+      sceneState: {
+        ambientColor: 0xffffff,
+        directColor: 0xffffff,
+        ambientIntensity: 0.4,
+        directIntensity: 0.8 * Math.PI,
+        exposure: 1.0,
+      },
 
       // Animation
       clips: null,
@@ -104,7 +111,7 @@ export default {
       this.scene.add(toRaw(this.defaultCamera));
 
       // Change Background Color
-      //this.scene.background = new THREE.Color(0x000000);
+      this.scene.background = new THREE.Color(0x000000);
 
       // Renderer
       this.renderer = new THREE.WebGLRenderer({ antialias: true });
